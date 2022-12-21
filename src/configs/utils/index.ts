@@ -1,0 +1,1 @@
+export { getNestedEnvConfig } from "./getNestedEnvConfig";
