@@ -104,7 +104,7 @@ export class Application {
     this.logger.log(sysInfo.MEMORY, "initServer");
     this.logger.log(sysInfo.OS, "initServer");
 
-    await this.app.listen(appConfig.port, () => {
+    await this.app.listen(appConfig.port, appConfig.ip, () => {
       this.logger.log(
         chalk.bold(
           "\t\t---------------------[ Server started ]---------------------------",
