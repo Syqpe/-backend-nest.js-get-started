@@ -1,10 +1,9 @@
 {
-  "name": "project-name",
+  "name": "your-project-name",
   "version": "0.0.1",
   "description": "",
-  "author": "",
-  "private": true,
-  "license": "UNLICENSED",
+  "author": "Kassymov Abat",
+  "private": false,
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "nest build",
@@ -26,10 +25,13 @@
     "@nestjs/core": "^9.0.0",
     "@nestjs/mapped-types": "^1.2.0",
     "@nestjs/platform-express": "^9.0.0",
+    "chalk": "4.1.2",
     "cross-env": "^7.0.3",
+    "nest-winston": "^1.8.0",
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.2",
-    "rxjs": "^7.2.0"
+    "rxjs": "^7.2.0",
+    "winston": "^3.8.2"
   },
   "devDependencies": {
     "@nestjs/cli": "^9.0.0",

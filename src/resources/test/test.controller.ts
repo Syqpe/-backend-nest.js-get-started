@@ -6,22 +6,26 @@ import {
   Patch,
   Param,
   Delete,
+  Inject,
 } from "@nestjs/common";
 import { TestService } from "./test.service";
 import { CreateTestDto } from "./dto/create-test.dto";
 import { UpdateTestDto } from "./dto/update-test.dto";
 import { ConfigService } from "@server/configs";
+import { Logger, LOGGER_MODULE_PROVIDER } from "@server/infrastructure";
 
 @Controller("test")
 export class TestController {
   constructor(
     private readonly testService: TestService,
     private readonly configService: ConfigService,
+    @Inject(LOGGER_MODULE_PROVIDER) private readonly logger: Logger,
   ) {}
 
   @Get("hello")
   hello() {
-    return "HEllo";
+    this.logger.info("TestController: GET");
+    return "Hello!";
   }
 
   @Post()
